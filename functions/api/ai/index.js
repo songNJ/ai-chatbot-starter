@@ -41,7 +41,7 @@ async function proxyDeepSeek(messages, model, env) {
   if (deepseekModel === 'deepseek-chat') {
     requestBody.temperature = 0.7;
   }
-  const res = await PROVIDERS.fetch('https://api.deepseek.com/chat/completions', {
+  const res = await fetch('https://api.deepseek.com/chat/completions', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
