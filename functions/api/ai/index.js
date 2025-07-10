@@ -49,7 +49,7 @@ async function proxyDeepSeek(messages, model, env) {
     },
     body: JSON.stringify(requestBody),
   });
-  return streamProxy(res);
+  return res;
 }
 
 async function proxyOpenAI(messages, env) {
@@ -69,7 +69,7 @@ async function proxyOpenAI(messages, env) {
       stream: true,
     }),
   });
-  return streamProxy(res);
+  return res;
 }
 
 async function proxyGemini(messages, env) {
