@@ -1,5 +1,5 @@
-export async function onRequest({ request, env }) 
-  request.headers.delete('accept-encoding')
+export async function onRequest({ request, env }) {
+  request.headers.delete('accept-encoding');
   try {
     const { model, messages } = await request.json();
     if (!model || !messages) {
